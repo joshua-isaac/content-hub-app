@@ -11,7 +11,6 @@ const ContentHub = () => {
   const [configValues, setConfigValues] = useState({});
   const [sdk, setSDK] = useState({});
   const [referenceName, setReferenceName] = useState(null);
-  const [items, setItems] = useState([]);
 
   let referenceNameData;
 
@@ -37,8 +36,6 @@ const ContentHub = () => {
 
   // update value
   const updateValue = (e, items) => {
-    // set up type variables
-    let linkType;
     let referenceName;
 
     // set type based on target name
@@ -92,7 +89,6 @@ const ContentHub = () => {
           <EntireList
             value={value}
             configValues={configValues}
-            setItems={setItems}
             updateValue={updateValue}
           />
         </div>

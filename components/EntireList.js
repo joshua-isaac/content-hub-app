@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import agility from "@agility/content-fetch";
 
-const EntireList = ({ value, configValues, updateValue, setItems }) => {
+const EntireList = ({ value, configValues, updateValue }) => {
   const [listItems, setListItems] = useState([]);
 
   // set up reference name
@@ -26,8 +26,7 @@ const EntireList = ({ value, configValues, updateValue, setItems }) => {
         locale: "en-us",
       });
 
-      // set states and update value
-      setItems(items);
+      // set list item state and update value
       setListItems(items);
       updateValue(null, items);
     })();
